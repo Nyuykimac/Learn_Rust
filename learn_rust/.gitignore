@@ -1,4 +1,4 @@
-target
+target/
 .md
 !README.md
-git rm --cached target
+git rm --cached target/
