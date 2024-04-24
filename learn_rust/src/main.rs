@@ -35,4 +35,8 @@ fn main() {
     let last_name: &str = "Ngoran";
 
     println!("the name is : {}, last name is: {}", name, last_name);
+
+    //compound data types : tuple and struct
+    let tuple_content = ("A", 12i32, false);
+    print!("tuple is `{}`", tuple_content.0);
 }
