@@ -42,19 +42,19 @@ fn main() {
 
     //compound data type:struct
 
-    struct Student {
-        name: String,
-        address: String,
-        matricule: char,
-        remote: bool,
-    }
-
     let student_1 = Student {
         name: String::from("John Doe"),
         address: String::from("Grand North Region"),
         matricule: 'A',
         remote: true,
     };
+
+    struct Student {
+        name: String,
+        address: String,
+        matricule: char,
+        remote: bool,
+    }
 
     println!(
         "the struct infos is: {} ,{} ,{} ,{}: ",
@@ -63,4 +63,24 @@ fn main() {
         student_1.matricule,
         student_1.remote
     );
+    #[derive(Debug)]
+    enum IPkind {
+        V6,
+        V4,
+    }
+    #[derive(Debug)]
+    struct IpAddress {
+        kind: IPkind,
+        address: String,
+    }
+    let home = IpAddress {
+        kind: IPkind::V4,
+        address: String::from("123.123.34"),
+    };
+
+    let loopback = IpAddress {
+        kind: IPkind::V6,
+        address: String::from("::1"),
+    };
+    println!("The ip addresses {:?}  {:?}", home, loopback);
 }
