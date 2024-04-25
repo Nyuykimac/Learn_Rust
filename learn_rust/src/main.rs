@@ -36,7 +36,31 @@ fn main() {
 
     println!("the name is : {}, last name is: {}", name, last_name);
 
-    //compound data types : tuple and struct
+    //compound data type : tuple
     let tuple_content = ("A", 12i32, false);
-    print!("tuple is `{}`", tuple_content.0);
+    println!("tuple is `{}`", tuple_content.0);
+
+    //compound data type:struct
+
+    struct Student {
+        name: String,
+        address: String,
+        matricule: char,
+        remote: bool,
+    }
+
+    let student_1 = Student {
+        name: String::from("John Doe"),
+        address: String::from("Grand North Region"),
+        matricule: 'A',
+        remote: true,
+    };
+
+    println!(
+        "the struct infos is: {} ,{} ,{} ,{}: ",
+        student_1.name,
+        student_1.address,
+        student_1.matricule,
+        student_1.remote
+    );
 }
