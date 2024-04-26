@@ -69,6 +69,7 @@ fn main() {
         V4,
     }
     #[derive(Debug)]
+    #[warn(dead_code)]
     struct IpAddress {
         kind: IPkind,
         address: String,
@@ -83,4 +84,12 @@ fn main() {
         address: String::from("::1"),
     };
     println!("The ip addresses {:?}  {:?}", home, loopback);
+
+    //declare arrays
+
+    let ar_names = ["John", "Doe"];
+    println!("the array is contents in index 0 is: {}", ar_names[0]);
+    //declare vector
+    let vec_type = vec!["AB", "BC", "CC"];
+    print!("the vec is contents in index 0 is: {}", vec_type[0]);
 }
